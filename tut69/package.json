@@ -1,0 +1,14 @@
+{
+  "name": "tut69",
+  "version": "1.0.0",
+  "description": "This is the best package ever built by someone.",
+  "main": "tut.69.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "Harshal",
+  "license": "ISC"
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body, html
+    {
+        background-image: linear-gradient(180deg, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("WhatsApp\ Image\ 2021-04-09\ at\ 3.56.32\ PM\ \(1\).jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 130%;
+    }
+    img
+    {
+        margin-left: 5%;
+    }
+    body
+    {
+        color: #fff;
+        text-align: center;
+    }
+    .NAME
+    {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        margin-right: 25%;
+        margin-left: 25%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button
+    {
+        background-color: yellow;
+        color: black;
+        padding: 20px;
+        margin-top: 120px ;
+
+    }
+    button:hover
+    {
+        background-color: rgba(255, 255, 0, 0.9)
+    }
+    .myimg
+    {
+        background-color: #f5f5f5;
+        height: 100px;
+        width: 100%;
+        display: block;
+    }
+    img
+    {
+        height: 100px;
+    }
+    a
+    {
+        text-decoration: none;
+        color: white;
+        margin-left: 70px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        font-style: italic;
+    }
+</style>
+<body>
+    <div class="myimg"><img src="WhatsApp Image 2021-04-11 at 8.45.39 PM.jpeg" alt=""></div>
+    <button class="mybutton">WHO IS YOUR POKE!</button>
+    <div class="NAME"><strong>NAME:</strong><a href="" id="name" ></a></div>
+    <div class="NAME"><strong>ID:</strong><a href="" id="myid"></a></div>
+    <div class="NAME"><strong>Base Experience:</strong> <a href="" id="baseexp"></a></div>
+    <div class="NAME"><strong>Height(in m):</strong> <a href="" id="height"></a></div>
+    <div class="NAME"><strong>Order:</strong> <a href="" id="order"></a></div>
+    <div class="NAME"><strong>Weight(in hg):</strong> <a href=""id="weight"></a></div>
+
+<script>
+    const name = document.getElementById("name");
+    const id = document.getElementById("myid");
+    const BaseExperience = document.getElementById("baseexp");
+    const Height = document.getElementById("height");
+    const Order = document.getElementById("order");
+    const Weight = document.getElementById("weight");
+    const button = document.querySelector(".mybutton");
+    button.addEventListener(`click`,(e) =>
+    {
+        e.preventDefault()
+        const rand = Math.ceil(Math.random() * 898)
+        fetch(`https://pokeapi.co/api/v2/pokemon/${rand}`)
+        .then(response => response.json())
+        .then(pokemon => {
+            console.log(pokemon)
+            name.innerHTML = pokemon["name"];
+            id.innerHTML = pokemon["id"];
+            BaseExperience.innerHTML = pokemon["base_experience"];
+            Height.innerHTML = pokemon["height"];
+            Order.innerHTML = pokemon["order"];
+            Weight.innerHTML = pokemon["weight"];
+
+        })
+    })
+</script>
+
+</body>
+</html>

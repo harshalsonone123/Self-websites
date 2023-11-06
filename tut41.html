@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 3fr;
+        grid-template-rows: repeat(4, 1fr);
+        /* grid-column-gap: 7rem;
+        grid-row-gap: 1rem; */
+        grid-gap: 1rem;
+      }
+
+      .box {
+        border: 2px solid black;
+        background-color: blueviolet;
+      }
+      .box:first-child {
+        /* grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3; */
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <dix class="box">item no 1</dix>
+      <dix class="box">item no 2</dix>
+      <dix class="box">item no 2</dix>
+      <dix class="box">item no 2</dix>
+      <dix class="box">item no 2</dix>
+      <dix class="box">item no 2</dix>
+      <dix class="box">item no 3</dix>
+      <dix class="box">item no 4</dix>
+      <dix class="box">item no 5</dix>
+      <dix class="box">item no 6</dix>
+      <dix class="box">item no 7</dix>
+      <dix class="box">item no 7</dix>
+      <dix class="box">item no 8</dix>
+    </div>
+  </body>
+</html>

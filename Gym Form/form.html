@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="form" action="./" method="POST">
+      <div class="form__title">Sign up</div>
+      <p class="form__desc">
+        Welcome to Island Gym. We appreciate your decision in joining our clubs.
+        Please let us help you succeed with your goals. We understand the
+        challenges individuals face when deciding to start working out. For the
+        majority, simply the question of how to exercise is the most common, for
+        others, finding the time to workout can become the biggest obstacle. At
+        Island Gym, we understand these questions and challenges and will
+        dedicate all our resources to help you lose weight and reach your goals.
+        Here at Island Gym, you will have a great time working out with friends,
+        while getting in the best shape of your life.
+      </p>
+      <div class="form__item">
+        <label for="givennames" class="form__label"> Name</label>
+        <input
+          type="text"
+          class="form__input"
+          name="givenname"
+          id="givenname"
+          placeholder="Enter your Name(s)"
+        />
+        <span class="form__error">A sample error message</span>
+      </div>
+      <div class="form__item">
+        <label for="numusers" class="form__label">Age</label>
+        <input
+          type="number"
+          class="form__input form__input--small"
+          name="numuser"
+          id="numuser"
+          min="17"
+          max="70"
+          placeholder="What is your age? (Min. 17 Max. 70)"
+        />
+        <span class="form__error">A sample error message</span>
+      </div>
+      <div class="form__item">
+        <label for="membershipdate" class="form__label">Membership Date</label>
+        <input
+          type="date"
+          class="form__input form__input--small"
+          name="membershipdate"
+          id="membershipdate"
+          placeholder="Enter an Membership date"
+        />
+        <span class="form__error">A sample error message</span>
+      </div>
+      <div class="form__item">
+        <label for="message" class="form__label">Message</label>
+        <textarea
+          maxlength="500"
+          class="form__input"
+          name="message"
+          id="message"
+          placeholder="Enter a detailed message about why you wish to signup. (Max. 500 chars)"
+        ></textarea>
+        <span class="form__error">A sample error message</span>
+      </div>
+      <div class="form__item">
+        <button class="form__btn" type="submit">Sign Up</button>
+      </div>
+    </form>
+  </body>
+</html>

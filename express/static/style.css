@@ -1,0 +1,39 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0ch;
+  padding: 0ch;
+}
+nav {
+  background-color: grey;
+  padding: 12px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+}
+li {
+  list-style: none;
+  padding: 3px 17px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.container {
+  background-color: yellow;
+  margin: 12px auto;
+  max-width: 70%;
+}
+h1 {
+  text-align: center;
+}
+input {
+  display: block;
+  padding: 3px;
+  margin: 15px auto;
+  width: 60%;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+}
